@@ -1,12 +1,14 @@
 @extends('layouts.main')
 
+@section('title', 'data table')
+
 @section ('content')
  
 
 
 <div class="card">
     <div class="card-header">
-    <h3 class="card-title">DataTable with default features</h3>
+    <h3 class="card-title">table</h3>
     </div>
     <!-- /.card-header -->
     <div class="card-body">
@@ -450,11 +452,14 @@
     </div>
     <!-- /.card-body -->
     </div>
-<script src="assets/plugins/datatables/jquery.dataTables.js"></script>
-<script src="assets/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
-<script>
-$(function () {
-$("#example1").DataTable();
-});
-</script>
+    
+    @push('scripts')
+    <script src="{{ asset('plugins/datatables/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js') }}"></script>
+    <script>
+        $(function () {
+            $("#example1").DataTable();
+        });
+    </script>
+    @endpush
 @endsection

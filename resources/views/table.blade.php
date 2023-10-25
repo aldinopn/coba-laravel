@@ -1,5 +1,7 @@
 @extends('layouts.main')
 
+@section('title', 'table')
+
 @section ('content')
  
 <table class="table table-bordered">
